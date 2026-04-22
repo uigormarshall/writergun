@@ -41,7 +41,7 @@ cp .env.example .env
 
 Variáveis úteis:
 
-- `WRITERGUN_ROOT`: pasta raiz das publicações (default: `publicacoes`)
+- `WRITERGUN_ROOT`: pasta raiz dos targets (default: `targets`)
 - `WRITERGUN_LOCALE` (ou `WRITERGUN_LANG`): idioma do `draft`/`final` (default: `pt-BR`)
 - `OLLAMA_HOST`: host do servidor do Ollama (default: `http://127.0.0.1:11434`)
 - `OLLAMA_API_KEY`: necessário para `webSearch/webFetch` (se você habilitar `WRITERGUN_WEB=true`)
@@ -66,10 +66,10 @@ Em 8 GB de VRAM, modelos 12B podem ter comportamento mais variável (offload par
 
 ## Estrutura de pastas
 
-A CLI opera dentro de uma pasta raiz (ex.: `publicacoes/`). Cada post é uma subpasta:
+A CLI opera dentro de uma pasta raiz (ex.: `targets/`). Cada post é uma subpasta:
 
 ```plaintext
-/publicacoes
+/targets
   ├── [nome-da-materia]
   │   ├── context.md   <-- (Input)
   │   ├── draft.md     <-- (Output 1)
