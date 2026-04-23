@@ -78,6 +78,9 @@ A CLI opera dentro de uma pasta raiz (ex.: `targets/`). Cada post é uma subpast
 
 ## Comandos
 
+- `**writergun**`
+  - Abre o modo interativo (REPL). Digite `/` para ver comandos.
+
 - `**writergun list**`
   - Lista as pastas e status (**PENDENTE**, **DRAFT**, **FINAL**) e data de modificação (tabela com `cli-table3`)
 - `**writergun aim <name>`**

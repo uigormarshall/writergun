@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://writergun.local/logging.schema.json",
+  "title": "Writergun NDJSON log line",
+  "description": "Cada linha do arquivo de log é um único objeto JSON (NDJSON). Encoding UTF-8.",
+  "type": "object",
+  "required": ["ts", "level", "event", "msg"],
+  "properties": {
+    "ts": {
+      "type": "string",
+      "description": "Instante ISO 8601 em UTC (ex.: 2026-04-16T12:34:56.789Z)."
+    },
+    "level": {
+      "type": "string",
+      "enum": ["debug", "info", "warn", "error"]
+    },
+    "event": {
+      "type": "string",
+      "description": "Nome estável do evento (ex.: cli.start, shot.web, shot.draft.ok)."
+    },
+    "msg": {
+      "type": "string",
+      "description": "Mensagem curta legível por humanos."
+    },
+    "meta": {
+      "type": "object",
+      "description": "Dados extras (paths relativos, modelo, duração, etc.).",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
